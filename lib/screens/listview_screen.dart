@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 class ListviewScreen extends StatelessWidget {
   const ListviewScreen({super.key});
 
-  
-
   void displayDialog(BuildContext context) {
     showDialog(
         barrierDismissible: false,
@@ -34,11 +32,11 @@ class ListviewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final reserva =
+        MaterialPageRoute(builder: (context) => const ReservaScreen());
+    final viajes =
+        MaterialPageRoute(builder: (context) => const ViajesScreen());
 
-    final home = MaterialPageRoute(builder: (context) => const ListviewScreen());
-    final reserva = MaterialPageRoute(builder: (context) => const ReservaScreen());
-    final viajes = MaterialPageRoute(builder: (context) => const ViajesScreen());
-    
     return Scaffold(
       appBar: AppBar(
         actions: const [
